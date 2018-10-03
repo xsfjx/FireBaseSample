@@ -24,9 +24,8 @@ public class MainActivity extends AppCompatActivity {
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
-//        Button btn = findViewById(R.id.btn);
+        //Button btn = findViewById(R.id.btn);
         tracker = MyApplication.getDefaultTracker();
-
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
@@ -41,8 +40,13 @@ public class MainActivity extends AppCompatActivity {
         addContentView(crashButton, new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
+        initM();
 
-//        btn.setOnClickListener(new View.OnClickListener() {
+
+    }
+
+    private void initM() {
+        //        btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                tracker.send(new HitBuilders.EventBuilder()
