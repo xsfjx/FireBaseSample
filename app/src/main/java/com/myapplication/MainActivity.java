@@ -29,17 +29,14 @@ public class MainActivity extends AppCompatActivity {
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-        Button crashButton = new Button(this);
-        crashButton.setText("Crash!");
+        Button crashButton = findViewById(R.id.crashButton);
         crashButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Crashlytics.getInstance().crash(); // Force a crash
             }
         });
 
-        addContentView(crashButton, new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT));
+
         initM();
 
 
