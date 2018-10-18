@@ -1,4 +1,4 @@
-package com.myapplication;
+package com.firebasesample;
 
 import android.app.Application;
 
